@@ -3,10 +3,13 @@
 @import 'includes/_header';
 @import 'includes/_footer';
 
+@import 'pages/elements/_carousel';
+
 
 body{
     font-family: $font-default;
     overflow-x: hidden;
+    width: 100vw;
 }
 
   
