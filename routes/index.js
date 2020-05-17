@@ -3,28 +3,27 @@ var router = express.Router();
 
 /* GET Página Inicial. */
 router.get("/", function (req, res, next) {
-  res.render("index");
+  res.render("pages/index");
 });
 
 /* GET Sobre Nós. */
 router.get("/sobre-nos", function (req, res, next) {
-  res.render("about");
+  res.render("pages/about");
 });
 
 /* GET Produtos. */
 router.get("/produtos", function (req, res, next) {
-  res.render("products");
+  res.render("pages/products");
 });
 
 /* GET Lojas. */
 router.get("/lojas", function (req, res, next) {
-  res.render("stores");
+  res.render("pages/stores");
 });
 
 /* GET Fale Conosco. */
 router.get("/fale-conosco", function (req, res, next) {
-  res.render("contact");
+  res.render("pages/contact");
 });
-
 
 module.exports = router;
