@@ -1,5 +1,9 @@
 .footer{
 
+    .footer-align{
+        align-items: center;
+    }
+
     .social-network{
         display: flex;
         justify-content: space-between;
@@ -17,6 +21,7 @@
     }
 
     .footer-logo{
+        margin: 0 auto;
         @media (min-width: $bp-1024){
             width: 50%;
         }
