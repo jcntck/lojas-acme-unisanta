@@ -1,2 +1,12 @@
+// Imports
+@import '_variables';
+@import 'includes/_header';
+@import 'includes/_footer';
+
+
+body{
+    font-family: $font-default;
+    overflow-x: hidden;
+}
 
   

@@ -1,0 +1,51 @@
+.header{
+    padding-left: 0;
+    padding-right: 0;
+    .logo{
+        @media (min-width: $bp-1024){
+            width: 20%;
+        }
+        @media (max-width: $bp-768){
+            width: 100%;
+        }
+    }
+
+    //Navbar
+    .navbar{
+        background: $blue_gradient;
+    }
+
+    .navbar-nav{
+        .nav-item{
+            @media (max-width: $bp-991) {
+                width: 100%;
+                text-align: center;
+                font-size: 1.2rem;
+            }
+            .nav-link{
+                color: $white;
+                border-radius: 3px;
+                text-transform: uppercase;
+                transition: all 0.4s ease-in;
+                &:hover{
+                    background: $white;
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $bp-991) {
+        .navbar-toggler{
+            display: block;
+            margin: 0 auto;
+            border-color: transparent;
+            >.nav-icon{
+                color: $white;
+                font-size: 2rem;
+            }
+        }   
+    }
+
+
+}

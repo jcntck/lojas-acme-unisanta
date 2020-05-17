@@ -1,0 +1,28 @@
+// Fontes
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+$font-default: 'Open Sans', sans-serif;
+
+$light: 400;
+$regular: 600;
+$bold: 700;
+
+// Cores
+
+$white: #fff;
+$blue: #134bb4;
+$blue_gradient: linear-gradient(180deg, #134BB4 0%, #002B7C 100%);
+
+
+// Breakpoints
+
+$bp-1024: 1023.98px;
+$bp-991: 991.98px;
+$bp-768: 767.98px;
+
+// Placeholders
+%btn{
+    text-transform: uppercase;
+    font-weight: $bold;
+    color: $white;
+}
