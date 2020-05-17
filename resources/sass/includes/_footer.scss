@@ -1,0 +1,11 @@
+.footer{
+    .go-top{
+        display: flex;
+        justify-content: flex-end;
+        .top-btn{
+            text-transform: uppercase;
+            font-size: 80%;
+            font-weight: $regular;
+        }
+    }
+}

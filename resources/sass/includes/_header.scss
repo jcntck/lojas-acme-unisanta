@@ -24,9 +24,10 @@
             }
             .nav-link{
                 color: $white;
+                font-weight: $regular;
                 border-radius: 3px;
                 text-transform: uppercase;
-                transition: all 0.4s ease-in;
+                transition: all 0.2s ease-in;
                 &:hover{
                     background: $white;
                     color: $blue;
@@ -46,6 +47,4 @@
             }
         }   
     }
-
-
 }
