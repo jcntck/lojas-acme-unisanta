@@ -1,6 +1,7 @@
 .header{
     padding-left: 0;
     padding-right: 0;
+    width: 100vw;
     .logo{
         @media (min-width: $bp-1024){
             width: 20%;
