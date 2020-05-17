@@ -1,4 +1,30 @@
 .footer{
+
+    .social-network{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 90px;
+        font-size: 2.5rem;
+        .fb{
+            color: $facebook;
+        }
+        .instagram{
+            color: $instagram;
+        }
+        .whatsapp{
+            color: $whatsapp;
+        }
+    }
+
+    .footer-logo{
+        @media (min-width: $bp-1024){
+            width: 50%;
+        }
+        @media (max-width: $bp-768){
+            width: 100%;
+        }
+    }
+
     .go-top{
         display: flex;
         justify-content: flex-end;
