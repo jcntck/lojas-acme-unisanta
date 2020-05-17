@@ -17,8 +17,10 @@
     "express": "~4.16.1",
     "express-ejs-layouts": "^2.5.0",
     "http-errors": "~1.6.3",
+    "knex": "^0.21.1",
     "morgan": "~1.9.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sqlite3": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
