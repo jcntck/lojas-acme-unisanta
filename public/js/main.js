@@ -17,9 +17,11 @@ btn.on('click', function (e) {
 }); // Slick Sobre-Nós
 
 $('#about-slider').slick({
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 300,
+  nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+  prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
   centerPadding: 0,
   slidesToShow: 1,
   slidesToScroll: 1,

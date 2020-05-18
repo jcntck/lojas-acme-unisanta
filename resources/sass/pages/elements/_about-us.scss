@@ -13,6 +13,46 @@
 }
 
 .about-content{
+    padding-bottom: 2rem;
+
+    .box-slider, .slick-slider{
+        display: flex;
+
+        .slick-arrow{
+            position: relative!important;
+            top: 360px!important;
+        }
+
+        .slick-prev, .slick-next{
+            color: $white;
+            font-size: 1rem;
+            background: $blue_gradient;
+            height: 40px;
+            width: 280px;
+            &:before{
+                display: none;
+            }
+        }
+        .slick-prev{
+            position: relative;
+            display: block;
+            transform: translate(350px, -17px)!important;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            z-index: 1;
+        }
+
+        .slick-next {
+            position: relative;
+            display: block;
+            transform: translate(-65px, -17px)!important;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+    }
+
 
     .about-text{
         >p{
