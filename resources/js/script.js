@@ -1,3 +1,5 @@
+// Voltar ao Topo
+
 var btn = $('#top-btn');
 
 $(window).scroll(function() {
@@ -11,4 +13,24 @@ $(window).scroll(function() {
 btn.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '300');
+});
+
+// Slick Sobre-Nós
+
+$('#about-slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  centerPadding: 0,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });

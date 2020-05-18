@@ -1,0 +1,29 @@
+.bg-about{
+    background: url('#{$path_img}about.jpg') no-repeat;
+    background-size: cover;
+}
+
+.about-us{
+    justify-content: center;
+    .title{
+        padding-top: 2rem;
+        @extend %title;
+        color: $white;
+    }
+}
+
+.about-content{
+
+    .about-text{
+        >p{
+            font-size: 1.4rem;
+            color: $white;
+            font-weight: $light;
+        }
+        .btn-default{
+            @extend %btn;
+            margin-right: auto;
+            margin-left: 1rem;
+        }
+    }
+}

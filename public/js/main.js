@@ -1,5 +1,6 @@
 "use strict";
 
+// Voltar ao Topo
 var btn = $('#top-btn');
 $(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
@@ -13,4 +14,20 @@ btn.on('click', function (e) {
   $('html, body').animate({
     scrollTop: 0
   }, '300');
+}); // Slick Sobre-Nós
+
+$('#about-slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  centerPadding: 0,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [{
+    breakpoint: 991,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
 });

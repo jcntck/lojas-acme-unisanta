@@ -1,11 +1,14 @@
 // Fontes
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 $font-default: 'Open Sans', sans-serif;
-
 $light: 400;
 $regular: 600;
 $bold: 700;
+
+
+// Extras
+$path_img: '../images/';
+$margin_default: 2rem;
 
 // Cores
 
@@ -15,6 +18,7 @@ $blue_gradient: linear-gradient(180deg, #134BB4 0%, #002B7C 100%);
 $facebook: #3b5998;
 $instagram: #517fa4;
 $whatsapp: #34af23;
+$shadow_default: 0 0 3px 1px rgba(0, 0, 0, 0.20);
 
 
 // Breakpoints
@@ -25,12 +29,28 @@ $bp-768: 767.98px;
 
 // Placeholders
 %btn{
+    display: block;
+    margin: 0 auto;
     text-transform: uppercase;
-    font-weight: $bold;
+    font-weight: $regular;
     color: $white;
+    background: $blue_gradient;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 10px 15px;
+    &:hover{
+        text-decoration: none;
+    }
 }
 
 %padding-reset{
     padding-left: 0;
     padding-right: 0;
+}
+
+%title{
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-size: 2rem;
+    margin-bottom: $margin_default;
 }

@@ -1,0 +1,32 @@
+.highlights{
+    justify-content: center;
+    .title{
+        @extend %title;
+    }
+    .card-deck{
+        .card{
+            border: 2px solid $blue;
+            box-shadow: $shadow_default;
+            min-height: 200px;
+            transition: transform 0.4s ease-in-out;
+            &:hover{
+                transform: scale(1.03);
+            }
+            .card-body{
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                .card-title{
+                    font-weight: $regular;
+                }
+            }
+        }
+    }
+
+    .see-more{
+        margin: $margin_default 0;
+        .btn-default{
+            @extend %btn;
+        }
+    }
+}
