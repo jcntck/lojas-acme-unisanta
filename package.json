@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
+    "gulp": "gulp",
     "heroku-postbuild": "echo Skip build on Heroku"
   },
   "dependencies": {
