@@ -1,0 +1,22 @@
+.cta{
+    min-height: 250px;
+    background: url('#{$path_img}cta.jpg') no-repeat;
+    background-size: cover;
+    .text{
+        justify-content: center;
+        padding: 0 30%;
+        .phrase{
+            color: black;
+            padding-top: 1rem;
+            text-transform: uppercase;
+            font-weight: $bold;
+            font-size: 1.7rem;
+            text-align: center;
+        }
+    }
+    .btn-default{
+        @extend %btn;
+        font-size: 1rem;
+        padding: 13px;
+    }
+}

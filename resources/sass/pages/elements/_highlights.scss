@@ -1,3 +1,27 @@
+.bg-hex{
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background: url('#{$path_img}shape.png') no-repeat;
+        background-size: contain;
+        opacity: 0.5;
+    }
+
+    &:after{
+        transform: translate(1244px, -200px) translateZ(1px);
+    }
+
+    &:before{
+        transform: translate(-120px, 0px) translateZ(1px);
+    }   
+}
+
 .highlights{
     justify-content: center;
     .title{
@@ -5,6 +29,7 @@
     }
     .card-deck{
         .card{
+            z-index: 1;
             border: 2px solid $blue;
             box-shadow: $shadow_default;
             min-height: 200px;

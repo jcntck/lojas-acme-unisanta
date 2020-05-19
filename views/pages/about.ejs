@@ -1,7 +1,40 @@
 <%- contentFor('body') %>
-<div class="container-fluid background-hex">
-
-    <div class="container about">
-        <h1 class="title">Sobre nós</h1>
+<div class="container about">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title">Sobre nós</h1>
+        </div>
+    </div>
+    <div class="row content">
+        <div class="col-md-12 col-lg-8">
+            <p>
+                Este projeto foi desenvolvido pelos alunos de Sistema de Informação da Universidade Santa Cecília no ano de 2020 para a disciplina de Engenharia de Software I ministrada pelo professor Cláudio Nunes, este site contempla as atividades práticas requisitadas no 2º bimestre da matéria.
+            </p>
+        </div>
+        <div class="col-12">
+            <p>
+                O Site ACME Calçados & Artigos Esportivos foi desenvolvido utilizando as ferramentas:
+            </p>
+        </div>
+        <div class="col-12">
+            <ul>
+                <li>Node.JS</li>
+                <li>GIT</li>
+                <li>EJS</li>
+                <li>Express</li>
+                <li>Gulp</li>
+                <li>Bootstrap</li>
+                <li>Sass</li>
+                <li>Nodemon</li>
+            </ul>
+        </div>
+        <div class="col-12">
+            <p>
+                Para maiores informações dos desenvolvedores deste projeto, acesse a página <a href="/fale-conosco">Fale Conosco</a>.
+            </p>
+        </div>
     </div>
 </div>
+
+    <!-- CTA -->
+    <%- include('elements/cta.ejs') %>

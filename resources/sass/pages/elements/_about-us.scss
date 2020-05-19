@@ -17,6 +17,7 @@
 
     .box-slider, .slick-slider{
         display: flex;
+        transform: translateX(-130px);
 
         .slick-arrow{
             position: relative!important;

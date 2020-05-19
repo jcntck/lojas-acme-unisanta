@@ -10,14 +10,21 @@
         margin: 0 90px;
         font-size: 2.5rem;
         .fb{
-            // color: $facebook;
-            color: red;
+            color: $facebook;
         }
         .instagram{
             color: $instagram;
         }
         .whatsapp{
             color: $whatsapp;
+        }
+
+        .fb, .instagram, .whatsapp{
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.15);
+            }
         }
     }
 
