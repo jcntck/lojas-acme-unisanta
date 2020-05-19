@@ -1,5 +1,10 @@
 .footer{
 
+    .linear-effect{
+        min-height: 20px;
+        background: linear-gradient(180deg, #002B7C 0%, #FFFFFF 100%);
+    }
+
     .footer-align{
         align-items: center;
     }

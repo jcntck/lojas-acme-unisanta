@@ -54,3 +54,11 @@ $bp-768: 767.98px;
     font-size: 2rem;
     margin-bottom: $margin_default;
 }
+
+// Global class
+.no-pad-mar{
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
