@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>ACME - Calçados & Artigos Esportivos</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/vendor/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/admin/dashboard.css">
+</head>
+
+<body>
+  <%- include('includes/header.ejs') %>
+
+  <div class="container-fluid">
+    <div class="row">
+      <%- include('includes/sidebar.ejs') %>
+
+      <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <%- body %>
+      </main>
+    </div>
+  </div>
+  <script src="/js/vendor.min.js" data-search-pseudo-elements></script>
+</body>
+
+</html>

@@ -3,6 +3,11 @@ var bcrypt = require('bcryptjs');
 var connection = require('../database/connection');
 var router = express.Router();
 
+// teste
+router.get("/teste", async function (req, res) {
+  res.render("admin/pages/teste", { layout: "admin/layout" });
+});
+
 // READ
 router.get("/", async function (req, res) {
   const users = await connection('users').select('*');
@@ -11,7 +16,12 @@ router.get("/", async function (req, res) {
 });
 
 // CREATE
-router.post("/", async function (req, res) {
+router.get("/cadastrar", function (req, res) {
+  res.render("admin/pages/users/create", { layout: "admin/layout" });
+});
+
+router.post("/salvar", async function (req, res) {
+  console.log(req.body);
   var { email, password } = req.body;
 
   password = bcrypt.hashSync(
