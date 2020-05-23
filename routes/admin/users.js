@@ -16,7 +16,11 @@ var router = express.Router();
 router.get("/", auth, async function (req, res) {
   const users = await connection("users").select("*");
 
-  res.send({ users });
+  res.render("admin/pages/users/index", {
+    layout: "admin/layout",
+    extractScripts: true,
+    link: "usuario.listar",
+  });
 });
 
 // CREATE

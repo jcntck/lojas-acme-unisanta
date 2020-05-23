@@ -1,13 +1,26 @@
 <%- contentFor('body') %>
-<h3>Cadastro de Usuários</h3>
-<form method="POST" action="/admin/usuarios/salvar">
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" name="email">
+<div class="row mt-4">
+  <div class="col-10 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">
+          <i class="fa fa-user-friends mr-2"></i>
+          Cadastro de Usuários
+        </h4>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/admin/usuarios/salvar">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="password">Senha</label>
-    <input type="password" class="form-control" id="password" name="password">
-  </div>
-  <button type="submit" class="btn btn-primary">Cadastrar</button>
-</form>
+</div>

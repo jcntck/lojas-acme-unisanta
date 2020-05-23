@@ -101,3 +101,19 @@ body {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
+
+/* TABLE */
+
+.page-link {
+  color: #343a40;
+}
+
+.page-link:hover {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.page-item.active .page-link {
+  background-color: #343a40;
+  border-color: #343a40;
+}

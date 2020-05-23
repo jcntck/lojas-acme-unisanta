@@ -1,0 +1,55 @@
+<%- contentFor('body') %>
+<div class="row mt-4">
+  <div class="col-10 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">
+          <i class="fa fa-user-friends mr-2"></i>
+          Listagem de Usuários
+        </h4>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover table-bordered" id="listagem" style="font-size: 1.2em;">
+          <thead class='bg-dark text-white'>
+            <tr>
+              <th scope="col" style="width: 10%">#</th>
+              <th scope="col" style="width: 70%">Email</th>
+              <th scope="col" style="width: 20%">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>email@email.com</td>
+              <td class="d-flex ">
+                <a href="" class="btn btn-sm btn-warning mr-3">Editar</a>
+                <form action="">
+                  <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
+                </form>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#listagem').DataTable({
+      "order": [],
+      "columnDefs": [
+        { "orderable": false, "targets": 2 }
+      ],
+      "language": {
+        "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+      },
+      "pageLength": 10,
+      "lengthChange": false,
+      "lengthMenu": [-1]
+    });
+  });
+</script>
