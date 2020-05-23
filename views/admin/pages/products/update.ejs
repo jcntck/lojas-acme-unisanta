@@ -1,0 +1,42 @@
+<%- contentFor('body') %>
+<div class="row mt-4">
+  <div class="col-10 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">
+          <i class="fa fa-user-friends mr-2"></i>
+          Editar Produto
+        </h4>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/admin/produtos/update/<%=product.id%>">
+          <div class="row">
+            <div class="col-10">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%=product.name%>">
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label for="price">Preço</label>
+                <input type="text" class="form-control" id="price" name="price" value="<%=product.price%>">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="password">Descrição</label>
+                <textarea class="form-control" id="description" name="description" rows="3">
+                  <%=product.description%>
+                </textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

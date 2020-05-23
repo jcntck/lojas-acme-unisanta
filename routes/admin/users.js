@@ -14,12 +14,14 @@ var router = express.Router();
 
 // READ
 router.get("/", auth, async function (req, res) {
-  const users = await connection("users").select("*");
+  const users = await connection("users").select("*").orderBy("id", "desc");
 
   res.render("admin/pages/users/index", {
     layout: "admin/layout",
     extractScripts: true,
     link: "usuario.listar",
+    success: req.flash("success"),
+    users
   });
 });
 
@@ -45,26 +47,47 @@ router.post("/salvar", auth, async function (req, res) {
 });
 
 // UPDATE
-router.put("/:id", async function (req, res) {
+router.get("/editar/:id", auth, async function(req, res) {
+  var { id } = req.params;
+
+  const user = await connection("users").where({id}).first();
+
+  res.render('admin/pages/users/update', {
+    layout: "admin/layout",
+    link: "usuario.editar",
+    // extractScripts: true,
+    user
+  });
+});
+
+router.post("/update/:id", auth, async function (req, res) {
   var { id } = req.params;
   var { email, password } = req.body;
 
-  password = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+  const data = { email };
+
+  if (password !== "") {
+    password = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+
+    data.password = password;
+  }
 
   var users = await connection("users")
     .where("id", id)
-    .update({ email, password });
+    .update(data);
 
-  res.send({ users });
+  req.flash("success", "Usuário atualizado com sucesso!");
+  res.redirect("/admin/usuarios");
 });
 
 // DELETE
-router.delete("/:id", async function (req, res) {
+router.post("/delete/:id", auth, async function (req, res) {
   var { id } = req.params;
 
   await connection("users").where("id", id).delete();
 
-  res.send({ mens: "Usuário deletado com sucesso" });
+  req.flash("success", "Usuário deletado com sucesso!");
+  res.redirect("/admin/usuarios");
 });
 
 module.exports = router;
