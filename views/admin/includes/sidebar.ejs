@@ -1,17 +1,25 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
   <div class="sidebar-sticky pt-3">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link <%= (link == 'home' ? 'active' : '') %>" href="/admin">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+      </li>
+    </ul>
     <h6 class="sidebar-heading px-3 mt-4 mb-1 text-muted">
-      <!-- <i class="fa fa-user-friends"></i> -->
+      <i class="fa fa-user-friends mr-2"></i>
       <span>Usuários</span>
     </h6>
     <ul class="nav flex-column">
-      <li class="nav-item">
+      <li class="nav-item px-4">
         <a class="nav-link" href="/admin/usuarios/">
           Gerenciar
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/admin/usuarios/cadastrar">
+      <li class="nav-item px-4">
+        <a class="nav-link <%= (link == 'usuario.cadastrar' ? 'active' : '') %>" href="/admin/usuarios/cadastrar">
           Cadastrar
         </a>
       </li>

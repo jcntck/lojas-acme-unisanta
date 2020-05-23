@@ -8,35 +8,35 @@
 
   <link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/vendor/all.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/admin/dashboard.css">
+  <link rel="stylesheet" type="text/css" href="/css/admin/login.css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!------ Include the above in your HEAD tag ---------->
 </head>
 
-<body>    
-    <div class="wrapper fadeInDown">
-      <div id="formContent">
-        <!-- Tabs Titles -->
-    
-        <!-- Icon -->
-        <div class="fadeIn first">
-          <img src="/images/logo-acme.png" id="icon" alt="ACME Calçados" />
-        </div>
-    
-        <!-- Login Form -->
-        <form>
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In">
-        </form>
-    
-        <!-- Remind Passowrd -->
-        <div id="formFooter">
-          <a class="underlineHover" href="#">Esqueceu a senha?</a>
-        </div>
-    
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <% if (error) { %>
+      <h2><%= error %></h2>
+      <% } %>
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="/images/logo-acme.png" id="icon" alt="ACME Calçados" />
       </div>
+
+      <!-- Login Form -->
+      <form method="POST" action="/admin/login/authenticate">
+        <input type="email" id="email" class="fadeIn second" name="email" placeholder="E-mail">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Senha">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+
     </div>
+  </div>
 </body>
+
 </html>
