@@ -1,0 +1,38 @@
+.products{
+    margin-top: $margin_default;
+    margin-bottom: $margin_default;
+    .title{
+        @extend %title_subpages;
+    }
+    .search-field{
+        display: flex;
+        justify-content: flex-end;
+        .search-form{
+            .search-input{
+                border: 0;
+                border-bottom: 1px solid gray;
+                &:focus{
+                    outline: none;
+                }
+            }
+            .search-button{
+                @extend %btn;
+                padding: 7px 20px;
+                display: inline-flex;
+            }
+        }
+    }
+}
+
+.products-grid{
+    margin: $margin_default 0;
+
+    .card{
+        .link{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+    

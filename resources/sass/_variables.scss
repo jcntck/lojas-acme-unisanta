@@ -29,6 +29,7 @@ $bp-768: 767.98px;
 
 // Placeholders
 %btn{
+    border: 0;
     display: block;
     margin: 0 auto;
     text-transform: uppercase;
@@ -53,6 +54,24 @@ $bp-768: 767.98px;
     font-weight: $bold;
     font-size: 2rem;
     margin-bottom: $margin_default;
+}
+
+
+%title_subpages{
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    font-weight: $bold;
+    position: relative;
+
+    &:after{
+        content: '';
+        background: $blue;
+        height: 5px;
+        width: 150px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;           
+    }
 }
 
 // Global class

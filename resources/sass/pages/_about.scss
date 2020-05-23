@@ -22,19 +22,6 @@ position: relative;
 margin-top: $margin_default;
 margin-bottom: $margin_default;
     .title{
-        text-transform: uppercase;
-        font-size: 1.9rem;
-        font-weight: $bold;
-        position: relative;
-
-        &:after{
-            content: '';
-            background: $blue;
-            height: 5px;
-            width: 150px;
-            position: absolute;
-            bottom: -5px;
-            left: 0;           
-        }
+        @extend %title_subpages;
     }
 }

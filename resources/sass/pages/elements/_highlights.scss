@@ -37,6 +37,13 @@
             &:hover{
                 transform: scale(1.03);
             }
+
+            .card-img-top{
+                max-height: 130px;
+                max-width: 130px;
+                margin: 0 auto;
+            }
+
             .card-body{
                 display: flex;
                 justify-content: center;
@@ -44,6 +51,12 @@
                 .card-title{
                     font-weight: $regular;
                 }
+            }
+            .link{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
             }
         }
     }
