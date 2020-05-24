@@ -4,6 +4,36 @@
         .carousel-inner{
             .carousel-item{
                 max-height: 400px;
+
+                .first{
+                    .carousel-title{
+                        font-weight: bold;
+                        background: $blue;
+                        color: $white;
+                        text-shadow: -1px 1px 10px black;
+                        border-radius: 5px;
+                    }
+                }
+
+                .second{
+                    .carousel-title{
+                        font-weight: bold;
+                        color: $white;
+                        background: $blue;
+                        text-shadow: -1px 1px 10px black;
+                        border-radius: 5px;
+                    }
+                }
+
+                .third{
+                    .carousel-title{
+                        font-weight: bold;
+                        background: $blue;
+                        color: $white;
+                        text-shadow: -1px 1px 10px black;
+                        border-radius: 5px;
+                    }   
+                }
             }
         }
     }
