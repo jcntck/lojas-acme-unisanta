@@ -24,5 +24,21 @@
         </a>
       </li>
     </ul>
+    <h6 class="sidebar-heading px-3 mt-4 mb-1">
+      <i class="fa fa-shopping-cart mr-2"></i>
+      <span>Produtos</span>
+    </h6>
+    <ul class="nav flex-column">
+      <li class="nav-item px-4">
+        <a class="nav-link <%= (link == 'produtos.listar' ? 'active' : '') %>" href="/admin/produtos">
+          Gerenciar
+        </a>
+      </li>
+      <li class="nav-item px-4">
+        <a class="nav-link <%= (link == 'produtos.cadastrar' ? 'active' : '') %>" href="/admin/produtos/cadastrar">
+          Cadastrar
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>

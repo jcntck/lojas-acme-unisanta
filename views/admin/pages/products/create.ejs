@@ -1,0 +1,40 @@
+<%- contentFor('body') %>
+<div class="row mt-4">
+  <div class="col-10 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">
+          <i class="fa fa-user-friends mr-2"></i>
+          Cadastro de Produtos
+        </h4>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/admin/produtos/salvar">
+          <div class="row">
+            <div class="col-10">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" name="name">
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label for="price">Preço</label>
+                <input type="text" class="form-control" id="price" name="price">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="description">Descrição</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
