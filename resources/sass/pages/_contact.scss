@@ -1,0 +1,90 @@
+.contact{
+    margin-top: $margin_default;
+    margin-bottom: $margin_default;
+    .title{
+        @extend %title_subpages;
+    }
+}
+
+.devs{
+    min-height: 300px;
+
+    .wrapper-img{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        &:after{
+            content: '';
+            background: url('#{$path_img}about/hexagon-about.png') no-repeat;
+            position: absolute;
+            transform: translateX(-120px);
+            background-size: cover;
+            width: 290px;
+            height: 320px;
+            @media (max-width: $bp-991){
+                display: none;
+            }
+        }
+    }
+
+    .front-dev, .back-dev{
+        .title{
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+
+    .name{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .social{
+
+        a{
+            .fa-github, .fa-linkedin{
+                color: black;
+                font-size: 18px;
+                margin-right: 15px;
+            }
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+
+}
+
+.teacher-project{
+    min-height: 400px;
+
+
+    .teacher{
+        .title{
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+
+    .wrapper-img{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        &:after{
+            content: '';
+            background: url('#{$path_img}about/hexagon-about2.png') no-repeat;
+            position: absolute;
+            transform: translateX(-940px);
+            background-size: cover;
+            width: 290px;
+            height: 330px;
+            @media (max-width: $bp-991){
+                display: none;
+            }
+        }
+    }
+
+}

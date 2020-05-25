@@ -46,6 +46,10 @@
     .go-top{
         display: flex;
         justify-content: flex-end;
+        @media (max-height: $bp-991) {
+            justify-content: center;
+        }
+
         .top-btn{
             cursor: pointer;
             text-transform: uppercase;
