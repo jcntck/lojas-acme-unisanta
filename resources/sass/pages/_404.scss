@@ -1,0 +1,24 @@
+.box-404{
+    margin-top: $margin_default;
+    margin-bottom: $margin_default;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .fa-frown{
+        font-size: 50px;
+    }
+    
+    .not-found{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    .message{
+        font-size: 1.1rem;
+    }
+
+}

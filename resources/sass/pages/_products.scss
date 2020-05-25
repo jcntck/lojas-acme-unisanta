@@ -1,7 +1,30 @@
 .products{
     margin-top: $margin_default;
     margin-bottom: $margin_default;
+    position: relative;
 
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        transform: translateX(-230px);
+        background: url('#{$path_img}shape.png') no-repeat;
+        background-size: 200px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        transform: translate(1120px,-220px);
+        background: url('#{$path_img}shape.png') no-repeat;
+        background-size: 200px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
 
 
     
@@ -60,8 +83,11 @@
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
+                padding: 0 1.25rem;
+                text-align: center;
                 .card-title{
                     font-weight: $regular;
+                    font-size: 1rem;
                 }
             }
             .link{
