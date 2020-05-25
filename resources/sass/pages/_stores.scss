@@ -4,4 +4,16 @@
     .title{
         @extend %title_subpages;
     }
+
+    .align{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title-address{
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.275rem;
+        }
+    }
 }
