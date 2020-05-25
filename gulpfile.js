@@ -34,13 +34,10 @@ const assets = {
     css: [
         "node_modules/bootstrap/dist/css/bootstrap.min.css",
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-        "node_modules/slick-carousel/slick/slick.css",
-        "node_modules/slick-carousel/slick/slick-theme.css",
     ],
     js: [
         "node_modules/bootstrap/dist/js/bootstrap.min.js",
         "node_modules/@fortawesome/fontawesome-free/js/all.min.js",
-        "node_modules/slick-carousel/slick/slick.min.js",
     ],
 }
 

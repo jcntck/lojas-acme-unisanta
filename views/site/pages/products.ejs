@@ -14,7 +14,6 @@
     </div>
   </div>
 
-  <!-- CRIE ALGO PARA APARECER CASO NÃO TENHA NENHUM PRODUTO -->
   <% if (products) { %>
   <div class="row products-grid">
     <div class="card-deck">
@@ -35,9 +34,14 @@
     </div>
 
   </div>
+  <% } else{ %>
 
+    <div class="row products-grid">
+      <p>Nenhum produto encontrado.</p>
+    </div>
+
+  <% } %>
 </div>
-<% } %>
 </div>
 
 <!-- CTA -->
