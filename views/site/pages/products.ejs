@@ -31,16 +31,15 @@
       </div>
       <% }); %>
 
+      <% if (products.length == 0) { %>
+          <p class="d-block mx-auto">
+            Nenhum produto encontrado.
+          </p>
+      <% } %>
+    <% } %>
+      
     </div>
-
   </div>
-  <% } else{ %>
-
-    <div class="row products-grid">
-      <p>Nenhum produto encontrado.</p>
-    </div>
-
-  <% } %>
 </div>
 </div>
 
