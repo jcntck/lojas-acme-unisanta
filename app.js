@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 const flash = require("connect-flash");
 const expressLayouts = require("express-ejs-layouts");
 const logger = require("morgan");
@@ -19,9 +20,14 @@ app.set("view engine", "ejs");
 app.set("layout extractScripts", true);
 
 app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/uploads", express.static(path.join(__dirname, "tmp")));
 
 app.use(cookieParser("secret"));
 app.use(

@@ -9,18 +9,18 @@
         </h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="/admin/produtos/salvar">
+        <form method="POST" action="/admin/produtos/salvar" enctype="multipart/form-data">
           <div class="row">
-            <div class="col-10">
+            <div class="col-4">
+              <div class="form-group">
+                <label for="price">Imagem</label>
+                <input type="file" accept="image/*" class="form-control" id="image" name="image">
+              </div>
+            </div>
+            <div class="col-8">
               <div class="form-group">
                 <label for="name">Nome</label>
                 <input type="text" class="form-control" id="name" name="name">
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="form-group">
-                <label for="price">Preço</label>
-                <input type="text" class="form-control" id="price" name="price">
               </div>
             </div>
           </div>
