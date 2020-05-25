@@ -1,3 +1,5 @@
+<!-- ESCONDE ESSA PARTE CASO NÃO TENHA NENHUM PRODUTO -->
+<% if (products) { %>
 <div class="container-fluid bg-hex">
 
     <div class="container highlights content">
@@ -7,34 +9,17 @@
             </h2>
         </div>
         <div class="card-deck">
+            <% products.forEach(function(product) { %>
             <div class="card">
-                <img src="/images/products/camiseta-puma.jpg" class="card-img-top" alt="Camiseta">
+                <img src="/uploads/images/products/<%= product.image %>" class="card-img-top" alt="<%=product.name%>">
                 <div class="card-body">
-                  <h5 class="card-title">Camiseta</h5>
+                    <h5 class="card-title"><%=product.name%></h5>
                 </div>
-                <a class="link" data-toggle="lightbox" data-title="Camiseta" data-footer="" data-remote="/images/products/camiseta-puma.jpg"></a>
+                <a class="link" data-toggle="lightbox" data-title="<%=product.name%>"
+                    data-footer="<%=product.description%>"
+                    data-remote="/uploads/images/products/<%= product.image %>"></a>
             </div>
-            <div class="card">
-                <img src="/images/products/tenis-nike.jpg" class="card-img-top" alt="Tênis">
-                <div class="card-body">
-                  <h5 class="card-title">Tênis</h5>
-                </div>
-                <a class="link" data-toggle="lightbox" data-title="Tênis" data-footer="" data-remote="/images/products/tenis-nike.jpg"></a>
-            </div>
-            <div class="card">
-                <img src="/images/products/smart-watch.jpg" class="card-img-top" alt="Relógio">
-                <div class="card-body">
-                  <h5 class="card-title">Relógios</h5>
-                </div>
-                <a class="link" data-toggle="lightbox" data-title="Relógio" data-footer="" data-remote="/images/products/smart-watch.jpg"></a>
-            </div>
-            <div class="card">
-                <img src="/images/products/bone-adidas.jpg" class="card-img-top" alt="Boné">
-                <div class="card-body">
-                  <h5 class="card-title">Boné</h5>
-                </div>
-                <a class="link" data-toggle="lightbox" data-title="Boné" data-footer="" data-remote="/images/products/bone-adidas.jpg"></a>
-            </div>
+            <% }); %>
         </div>
         <div class="row see-more">
             <a class="btn-default" href="/produtos">ver mais produtos</a>
@@ -42,4 +27,4 @@
     </div>
 
 </div>
-
+<% } %>

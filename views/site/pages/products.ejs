@@ -2,83 +2,43 @@
 <div class="container products">
   <div class="row">
     <div class="col-md-12 col-lg-6">
-        <h1 class="title">Produtos</h1>
+      <h1 class="title">Produtos</h1>
     </div>
     <div class="col-md-12 col-lg-6 search-field">
 
-      <form class="search-form" action="" method="GET">
-        <input class="search-input" type="text" placeholder="Tênis, camisetas e etc...">
+      <form class="search-form" method="GET">
+        <input class="search-input" type="text" name="search" placeholder="Tênis, camisetas e etc...">
         <button class="search-button" type="submit">Buscar</button>
       </form>
 
     </div>
   </div>
 
+  <!-- CRIE ALGO PARA APARECER CASO NÃO TENHA NENHUM PRODUTO -->
+  <% if (products) { %>
   <div class="row products-grid">
     <div class="card-deck">
-        <!-- Card -->
-        <div class="col-md-12 col-lg-3 p-0">
-          <div class="card">
-            <img src="/images/products/camiseta-puma.jpg" class="card-img-top" alt="Camiseta">
-            <div class="card-body">
-              <h5 class="card-title">Camiseta</h5>
-            </div>
-            <a class="link" data-toggle="lightbox" data-title="Camiseta" data-footer="" data-remote="/images/products/camiseta-puma.jpg"></a>
+      <!-- Card -->
+      <% products.forEach(function(product) { %>
+      <div class="col-md-12 col-lg-3 p-0">
+        <div class="card">
+          <img src="/uploads/images/products/<%= product.image %>" class="card-img-top" alt="<%=product.name%>">
+          <div class="card-body">
+            <h5 class="card-title"><%=product.name%></h5>
           </div>
+          <a class="link" data-toggle="lightbox" data-title="<%=product.name%>" data-footer="<%=product.description%>"
+            data-remote="/uploads/images/products/<%= product.image %>"></a>
         </div>
-
-        <!-- Card -->
-        <div class="col-md-12 col-lg-3 p-0">
-          <div class="card">
-            <img src="/images/products/tenis-nike.jpg" class="card-img-top" alt="Tênis">
-            <div class="card-body">
-              <h5 class="card-title">Tênis</h5>
-            </div>
-            <a class="link" data-toggle="lightbox" data-title="Tênis" data-footer="" data-remote="/images/products/tenis-nike.jpg"></a>
-          </div>
-        </div>
-
-        <!-- Card -->
-        <div class="col-md-12 col-lg-3 p-0">
-          <div class="card">
-            <img src="/images/products/smart-watch.jpg" class="card-img-top" alt="Relógio">
-            <div class="card-body">
-              <h5 class="card-title">Relógios</h5>
-            </div>
-            <a class="link" data-toggle="lightbox" data-title="Relógio" data-footer="" data-remote="/images/products/smart-watch.jpg"></a>
-          </div>
-        </div>
-
-        <!-- Card -->
-        <div class="col-md-12 col-lg-3 p-0">
-
-          <div class="card">
-            <img src="/images/products/bone-adidas.jpg" class="card-img-top" alt="Boné">
-            <div class="card-body">
-              <h5 class="card-title">Boné</h5>
-            </div>
-            <a class="link" data-toggle="lightbox" data-title="Boné" data-footer="" data-remote="/images/products/bone-adidas.jpg"></a>
-          </div>
-          
-        </div>
-
-        <!-- Card -->
-        <div class="col-md-12 col-lg-3 p-0">
-
-          <div class="card">
-            <img src="/images/products/bone-adidas.jpg" class="card-img-top" alt="Boné">
-            <div class="card-body">
-              <h5 class="card-title">Boné</h5>
-            </div>
-            <a class="link" data-toggle="lightbox" data-title="Boné" data-footer="" data-remote="/images/products/bone-adidas.jpg"></a>
-          </div>
-                  
       </div>
+      <% }); %>
 
     </div>
 
   </div>
+
+</div>
+<% } %>
 </div>
 
-    <!-- CTA -->
-    <%- include('elements/cta.ejs') %>
+<!-- CTA -->
+<%- include('elements/cta.ejs') %>

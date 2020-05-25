@@ -33,7 +33,10 @@ router.post("/authenticate", async function (req, res) {
     expiresIn: 86400,
   });
 
-  res.cookie("token", token, { maxAge: 86400, httpOnly: true });
+  res.cookie("token", token, {
+    maxAge: 1000 * 60 * 60 * 24,
+    httpOnly: true,
+  });
   res.redirect("/admin/");
 });
 

@@ -11,7 +11,7 @@ var router = express.Router();
 var upload = multer({ dest: images.products.dest });
 
 // READ
-router.get("/", async function (req, res) {
+router.get("/", auth, async function (req, res) {
   const products = await connection("products")
     .select("*")
     .orderBy("id", "desc");
@@ -26,14 +26,14 @@ router.get("/", async function (req, res) {
 });
 
 // CREATE
-router.get("/cadastrar", function (req, res) {
+router.get("/cadastrar", auth, function (req, res) {
   res.render("admin/pages/products/create", {
     layout: "admin/layout",
     link: "produtos.cadastrar",
   });
 });
 
-router.post("/salvar", upload.single("image"), async function (req, res) {
+router.post("/salvar", auth, upload.single("image"), async function (req, res) {
   var { name, description } = req.body;
   var image = req.file;
 
