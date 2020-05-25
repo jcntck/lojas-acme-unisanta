@@ -276,3 +276,12 @@ input:placeholder {
 #icon {
   width: 60%;
 }
+
+.return-home{
+  text-transform: uppercase;
+  font-size: 80%;
+}
+
+.return-home:hover{
+  text-decoration: none;
+}

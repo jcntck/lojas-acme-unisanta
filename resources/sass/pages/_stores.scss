@@ -1,0 +1,7 @@
+.stores{
+    margin-top: $margin_default;
+    margin-bottom: $margin_default;
+    .title{
+        @extend %title_subpages;
+    }
+}
