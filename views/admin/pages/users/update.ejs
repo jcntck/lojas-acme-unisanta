@@ -9,14 +9,15 @@
         </h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="/admin/usuarios/update/<%=user.id%>">
+        <form method="POST" action="/admin/usuarios/update/<%=user.id%>" class="needs-validation" novalidate>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" value="<%=user.email%>">
+            <input type="email" class="form-control validation" id="email" name="email" value="<%=user.email%>" required>
+            <div class="invalid-feedback" data-error="email"></div>
           </div>
           <div class="form-group">
             <label for="password">Senha</label>
-            <input type="password" class="form-control" id="password" name="password">
+            <input type="password" class="form-control validation" id="password" name="password">
           </div>
           <button type="submit" class="btn btn-primary">Salvar</button>
         </form>

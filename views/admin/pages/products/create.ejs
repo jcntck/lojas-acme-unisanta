@@ -9,18 +9,21 @@
         </h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="/admin/produtos/salvar" enctype="multipart/form-data">
+        <form method="POST" action="/admin/produtos/salvar" enctype="multipart/form-data" class="needs-validation"
+          novalidate>
           <div class="row">
             <div class="col-4">
               <div class="form-group">
                 <label for="price">Imagem</label>
-                <input type="file" accept="image/*" class="form-control" id="image" name="image">
+                <input type="file" accept="image/*" class="form-control validation" id="image" name="image" required>
+                <div class="invalid-feedback" data-error="image"></div>
               </div>
             </div>
             <div class="col-8">
               <div class="form-group">
                 <label for="name">Nome</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control validation" id="name" name="name" required>
+                <div class="invalid-feedback" data-error="name"></div>
               </div>
             </div>
           </div>
@@ -28,7 +31,9 @@
             <div class="col">
               <div class="form-group">
                 <label for="description">Descrição</label>
-                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                <textarea class="form-control validation" id="description" name="description" rows="3" maxlength="150"
+                  required></textarea>
+                  <div class="invalid-feedback" data-error="description"></div>
               </div>
             </div>
           </div>

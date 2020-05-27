@@ -29,6 +29,7 @@ router.get("/", auth, async function (req, res) {
 router.get("/cadastrar", auth, function (req, res) {
   res.render("admin/pages/products/create", {
     layout: "admin/layout",
+    extractScripts: true,
     link: "produtos.cadastrar",
   });
 });
@@ -62,7 +63,7 @@ router.get("/editar/:id", auth, async function (req, res) {
   res.render("admin/pages/products/update", {
     layout: "admin/layout",
     link: "produtos.editar",
-    // extractScripts: true,
+    extractScripts: true,
     product,
   });
 });

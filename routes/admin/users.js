@@ -29,6 +29,7 @@ router.get("/", auth, async function (req, res) {
 router.get("/cadastrar", auth, function (req, res) {
   res.render("admin/pages/users/create", {
     layout: "admin/layout",
+    extractScripts: true,
     link: "usuario.cadastrar",
   });
 });
@@ -55,7 +56,7 @@ router.get("/editar/:id", auth, async function(req, res) {
   res.render('admin/pages/users/update', {
     layout: "admin/layout",
     link: "usuario.editar",
-    // extractScripts: true,
+    extractScripts: true,
     user
   });
 });
